@@ -1,41 +1,43 @@
 package net.salesianos.actividades;
 
-import java.io.BufferedReader; // Permite leer textos de una funete de entrada (Como por ejemplo un archivo)
-import java.io.FileReader; // Lo mismo que el Buffered, pero sin optimización. Es decir, es menos eficiente
-import java.io.IOException;
+import java.io.BufferedReader; // Permite leer textos de una fuente de entrada (Como un archivo)
+import java.io.FileReader; // Lo mismo que BufferedReader, pero sin optimización (Menos eficiente)
+import java.io.FileWriter; // Nos permite escribir en un archivo
+import java.io.IOException; // Maneja errores cuando trabajamos con archivos
 
 public class Actividad2 {
     public static void main(String[] args) {
-        String nombreFichero = "ficheroActividad2.txt";
+        String ficheroOrigen = "ficheroActividad1.txt"; // Archivo que vamos a leer
+        String ficheroDestino = "ficheroActividad2.txt"; // Archivo nuevo que vamos a crear
 
-        try (BufferedReader br = new BufferedReader(new FileReader(nombreFichero))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(ficheroOrigen));
+                FileWriter fw = new FileWriter(ficheroDestino)) {
 
-            // Abre el fichero en modo lectura con el File Reader, peeeero, como funciona
-            // medio medio, se usa también este de abajo
-            // Hola, soy BufferedReader y mejoro lo que el de arriba no puede hacer, de
+            // Hola, soy BufferedReader y mejoro lo que el FileReader no puede hacer, de
             // forma optimizada
-
-            int c; // <------- Esta cosita almacena el código ASCII de cada carácter del ficehero
-                   // creado con anterioridad
-            StringBuilder salida = new StringBuilder(); // Stringbuilder es para que lea el espacio y las comas, por lo
-                                                        // que tengo entendido
+            int c; // <------- Almacena el código ASCII de cada carácter del fichero
+            StringBuilder salida = new StringBuilder(); // StringBuilder para construir la salida final
 
             while ((c = br.read()) != -1) {
-                // Lee todo el fichero hasta el final, que es el -1 ese. Porque el 0 es el
-                // primer carácter
-
-                char ch = (char) c; // Volvemos a usar la "C", pero esta vez, sirve para convertir el caracter en su
-                                    // ASCII correspondiente
+                // Lee carácter por carácter hasta llegar al final (-1 indica fin de archivo)
+                char ch = (char) c; // Convierte el número ASCII a su carácter correspondiente
                 salida.append(ch).append("_").append((int) ch).append(", ");
             }
 
-            // Y si eres tan listo de que lo último fue coma o espacio, esto lo elimina uwu
+            // Si lo último fue coma y espacio, lo eliminamos uwu
             if (salida.length() >= 2) {
                 salida.setLength(salida.length() - 2);
             }
-            System.out.println(salida.toString());
+
+            System.out.println("Vale, vamoh a crear el archivo\n" + salida.toString());
+
+            // Escribir la salida en `ficheroActividad2.txt`
+            fw.write(salida.toString());
+            System.out.println("Archivo " + ficheroDestino + " creado con exito mister " + ficheroOrigen);
+
         } catch (IOException e) {
-            System.out.println("Brother, y si primero pruebas a crear un fichero que se llame " + nombreFichero + "? " + e.getMessage());
+            System.out.println("Brother, y si primero pruebas a crear un fichero que se llame " + ficheroOrigen + "? "
+                    + e.getMessage());
         }
     }
 }
