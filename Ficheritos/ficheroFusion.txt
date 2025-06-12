@@ -1,4 +1,0 @@
-- Contenido del Fichero Uno: DESESPERACI¢NDESESPERACI¢NDESESPERACI¢NDESESPERACI¢NDESESPERACI¢NDESESPERACI¢NDESESPERACI¢N
-- Contenido del Fichero Dos: D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78, D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78, D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78, D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78, D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78, D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78, D_68, E_69, S_83, E_69, S_83, P_80, E_69, R_82, A_65, C_67, I_73, ¢_162, N_78
-
-Firma: [Tu nombre o firma aquí]
