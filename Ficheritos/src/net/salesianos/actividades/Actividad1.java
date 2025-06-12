@@ -24,7 +24,7 @@ public class Actividad1 {
         texto = texto.toUpperCase().replace(' ', '_');
 
         // Escribir el texto formateado en un fichero ------> FileWriter
-        try (FileWriter fw = new FileWriter("ficheroActividad2.txt")) { // Para cocinar el siguiente ejercicio
+        try (FileWriter fw = new FileWriter("ficheroActividad1.txt")) { // Para cocinar el siguiente ejercicio
             fw.write(texto);
             System.out.println("Texto guardado correctamente en el fichero mi hermanito, felicidades.");
         } catch (IOException e) {
