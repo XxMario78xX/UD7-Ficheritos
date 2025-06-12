@@ -1,0 +1,11 @@
+Manual de Uso Súper Mega Hiper Breve
+1️ Ejecuta App.java para acceder al menú principal.
+2️  Selecciona una actividad:
+- Actividad 1 → Guarda texto en ficheroActividad1.txt.
+- Actividad 2 → Convierte texto a ASCII y lo guarda en ficheroActividad2.txt.
+- Actividad 3 → Fusiona ambos archivos en ficheroFusion.txt.
+- Actividad 4 → Crea y muestra mesas guardadas en mesas.txt.
+3️  Si algo no funciona, culpa a flush(), revisa mensajes de consola y prueba otra vez.
+4️  Disfruta del poder de los archivos y recuerda: programar es magia con lógica.
+Si mesas.txt sigue resistiéndose, háblale bonito o amenaza con System.out.println("Funciona o te borro"). 😎🔥
+¡Listo! ¿Quieres que le meta un cierre épico o alguna frase legendaria? 🚀
